@@ -4,19 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Scoots Rentals">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="images/idaho-falls.webp">
+    <meta
+      property="og:url"
+      content="https://spudlamx.github.io/wdd230/chamber/"
+  >
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+  >
     <title>Scoots Home</title>
+    <meta name="author" content="Spencer Lamoreaux">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-    <p>📄 The Home page is a contemporary, exciting landing page providing 
-        images of the island and rental facilities and must include the following:<br>
-        A call to action to make a rental reservation.<br>
-        Readily available navigation and contact information.<br>
-        Summary information about all the types of rentals.<br>
-        Social media links (a general link is OK)<br>
-        The current weather information, obtained from the free version of openweathermap.org.<br>
-        ✔️ Include at least the current temperature, current condition description, and humidity.<br>
-        ✔️ Include any weather alerts if available (applicable) from the government and display it as a 
-        closeable message at the top of the page.<br>
-        ✔️ Also display and label a one day forecast.</p>
+    <header>
+        <img id="logo" src="images/scooters.webp" alt="logo">
+        <h1>Scoots Rentals</h1>
+        <h3>Home</h3>
+    </header>
+    <nav>
+        <button id="menu"></button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="right">
+            <div id="hero">
+                <picture id="heroImg">
+                  <source
+                    srcset="images/scooters.webp"
+                    type="image/webp"
+                >
+              
+                  <img src="images/scooters.webp" alt="Idaho Falls" id="heroImg">
+                </picture>
+                  <a id="overlay" href="index.html">Get a ride!</a>
+              </div>
+              <div id="photoAlbum">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
+              </div>
+        </section>
+        <section id="left">
+            <div class="card" id="weather">weather</div>
+            <div class="card"> rental types</div>
+
+        </section>
+        
+        </main>
+    <footer>
+        <p id="contact">contact <br> +1(234)567-8910<br>testemail@gmail.com</p>
+    </footer>
 </body>
 </html>
+<!--    📄 The Home page is a contemporary, exciting landing page providing 
+        images of the island and rental facilities and must include the following:
+        A call to action to make a rental reservation.
+        Readily available navigation and contact information.
+        Summary information about all the types of rentals.
+        Social media links (a general link is OK)
+        The current weather information, obtained from the free version of openweathermap.org.
+        ✔️ Include at least the current temperature, current condition description, and humidity.
+        ✔️ Include any weather alerts if available (applicable) from the government and display it as a 
+        closeable message at the top of the page.
+        ✔️ Also display and label a one day forecast. -->

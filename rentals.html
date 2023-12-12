@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Scoots Rentals">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="images/idaho-falls.webp">
+    <meta
+      property="og:url"
+      content="https://spudlamx.github.io/wdd230/chamber/"
+  >
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+  >
     <title>Scoots Rentals</title>
+    <meta name="author" content="Spencer Lamoreaux">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
+    <header>
+        <img id="logo" src="images/scooters.webp" alt="logo">
+        <h1>Scoots Rentals</h1>
+        <h3>Rentals</h3>
+    </header>
+    <nav>
+        <button id="menu"></button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <p>📄 The Rentals page describes the available rental options and prices with images.<br>
         The prices displayed on the site must be obtained from a JSON data source of your own making.<br>
         Store this .json file in a data 📁 folder in this project folder.<br>
         Incorporate a data table in your HTML structure to display some portion of this information.</p>
-</body>
+        <footer>
+            <p id="contact">contact <br> +1(234)567-8910<br>testemail@gmail.com</p>
+        </footer>
+    </body>
 </html>
