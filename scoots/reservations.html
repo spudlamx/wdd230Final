@@ -1,225 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Scoots Rentals" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:image" content="images/idaho-falls.webp" />
+    <meta
+      property="og:url"
+      content="https://spudlamx.github.io/wdd230/chamber/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
+    <title>Scoots Reservations</title>
+    <meta name="author" content="Spencer Lamoreaux" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/smaller.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="images/scooters.webp" alt="logo" />
+      <h1>Scoots Rentals</h1>
+      <h3>Reservations</h3>
+    </header>
+    <nav>
+      <button id="menu"></button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main id="reserveMain">
+      <section>
+        <h2>Vehicle Rental Form</h2>
 
-  <!DOCTYPE html>
-  <html lang="en-US">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta property="og:title" content="Scoots Rentals">
-      <meta property="og:type" content="Website">
-      <meta property="og:image" content="images/idaho-falls.webp">
-      <meta
-        property="og:url"
-        content="https://spudlamx.github.io/wdd230/chamber/"
-    >
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Outfit"
-    >
-      <title>Scoots Reservations</title>
-      <meta name="author" content="Spencer Lamoreaux">
-      <link rel="stylesheet" href="styles/base.css">
-    </head>
-    <body>
-      <header>
-        <img id="logo" src="images/scooters.webp" alt="logo">
-        <h1>Scoots Rentals</h1>
-        <h3>Reservations</h3>
-      </header>
-      <nav>
-        <button id="menu"></button>
-        <ul class="navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rentals.html">Rentals</a></li>
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <main id="reserveMain">
-        <section>
-          <h2>Vehicle Rental Form</h2>
+        <form method="get" action="thanks.html">
+          <label for="rental_type">Rental Type:</label><br />
+          <select id="rental_type" name="rental_type" required>
+            <option value="">Select rental type</option>
+            <optgroup label="Honda Motor Scooters">
+              <option value="Honda Metropolitan (49cc) - 1 person">
+                Honda Metropolitan (49cc) - 1 person
+              </option>
+              <option value="Honda Dio (110cc) - 2 person">
+                Honda Dio (110cc) - 2 person
+              </option>
+              <option value="Honda PCX150 (149cc) - 2 person">
+                Honda PCX150 (149cc) - 2 person
+              </option>
+            </optgroup>
+            <optgroup label="Side-by-Side ATVs">
+              <option value="Honda Pioneer 1000 - 4 person">
+                Honda Pioneer 1000 - 4 person
+              </option>
+            </optgroup>
+            <optgroup label="Jeeps">
+              <option value="Jeep Wrangler - 4 door manuel with A/C - 5 person">
+                Jeep Wrangler - 4 door manual with A/C - 5 person
+              </option>
+              <option
+                value="Jeep Wrangler - 2 door - open air - manual - 4 person"
+              >
+                Jeep Wrangler - 2 door - open air - manual - 4 person
+              </option>
+            </optgroup>
+          </select>
 
-          <form method="get" action="thanks.html">
-            <label for="rental_type">Rental Type:</label><br>
-            <select id="rental_type" name="rental_type" required>
-              <option value="">Select rental type</option>
-              <optgroup label="Honda Motor Scooters">
-                <option value="Honda Metropolitan (49cc) - 1 person">
-                  Honda Metropolitan (49cc) - 1 person
-                </option>
-                <option value="Honda Dio (110cc) - 2 person">
-                  Honda Dio (110cc) - 2 person
-                </option>
-                <option value="Honda PCX150 (149cc) - 2 person">
-                  Honda PCX150 (149cc) - 2 person
-                </option>
-              </optgroup>
-              <optgroup label="Side-by-Side ATVs">
-                <option value="Honda Pioneer 1000 - 4 person">
-                  Honda Pioneer 1000 - 4 person
-                </option>
-              </optgroup>
-              <optgroup label="Jeeps">
-                <option
-                  value="Jeep Wrangler - 4 door manuel with A/C - 5 person"
-                >
-                  Jeep Wrangler - 4 door manual with A/C - 5 person
-                </option>
-                <option
-                  value="Jeep Wrangler - 2 door - open air - manual - 4 person"
-                >
-                  Jeep Wrangler - 2 door - open air - manual - 4 person
-                </option>
-              </optgroup>
-            </select>
+          <label for="rental_date"
+            >Rental Date:
+            <input
+              type="date"
+              id="rental_date"
+              name="rental_date"
+              required
+              oninput="checkDates()"
+            />
+          </label>
 
-            <label for="rental_date"
-              >Rental Date:
-              <input type="date" id="rental_date" name="rental_date" required oninput="checkDates()">
-            </label>
+          <label for="return_date"
+            >Return Date:
+            <input
+              type="date"
+              id="return_date"
+              name="return_date"
+              required
+              oninput="checkDates()"
+            />
+          </label>
 
-            <label for="return_date"
-              >Return Date:
-              <input type="date" id="return_date" name="return_date" required oninput="checkDates()">
-            </label>
+          <label for="num_of_vehicles"
+            >Number of Vehicles:
+            <input
+              type="number"
+              id="num_of_vehicles"
+              name="num_of_vehicles"
+              min="1"
+              required
+            />
+          </label>
 
-            <label for="num_of_vehicles"
-              >Number of Vehicles:
-              <input
-                type="number"
-                id="num_of_vehicles"
-                name="num_of_vehicles"
-                min="1"
-                required
-            >
-            </label>
+          <label for="phone"
+            >Phone Number:
+            <input type="tel" id="phone" name="phone" required />
+          </label>
 
-            <label for="phone"
-              >Phone Number:
-              <input type="tel" id="phone" name="phone" required>
-            </label>
+          <label for="name"
+            >Name:
 
-            <label for="name"
-              >Name:
+            <input type="text" id="name" name="name" required />
+          </label>
 
-              <input type="text" id="name" name="name" required>
-            </label>
+          <label for="email"
+            >Email:
 
-            <label for="email"
-              >Email:
+            <input type="email" id="email" name="email" required />
+          </label>
 
-              <input type="email" id="email" name="email" required>
-            </label>
+          <label for="home_location"
+            >Home State or Country:
 
-            <label for="home_location"
-              >Home State or Country:
+            <input
+              type="text"
+              id="home_location"
+              name="home_location"
+              required
+            />
+          </label>
 
-              <input
-                type="text"
-                id="home_location"
-                name="home_location"
-                required
-            >
-            </label>
+          <label for="cruise_line"
+            >Cruise Line (if applicable):
 
-            <label for="cruise_line"
-              >Cruise Line (if applicable):
+            <input type="text" id="cruise_line" name="cruise_line" />
+          </label>
 
-              <input type="text" id="cruise_line" name="cruise_line">
-            </label>
+          <label for="special_accommodations"
+            >Special Accommodations/Comments:
+            <textarea
+              id="special_accommodations"
+              name="special_accommodations"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </label>
 
-            <label for="special_accommodations"
-              >Special Accommodations/Comments:
-              <textarea
-                id="special_accommodations"
-                name="special_accommodations"
-                rows="4"
-                cols="50"
-              ></textarea>
-            </label>
+          <label for="drop_off_request"
+            >Drop-off Request (if any):
+            <input type="text" id="drop_off_request" name="drop_off_request" />
+          </label>
 
-            <label for="drop_off_request"
-              >Drop-off Request (if any):
-              <input
-                type="text"
-                id="drop_off_request"
-                name="drop_off_request"
-            >
-            </label>
-
-            <input type="submit" value="Reserve Vehicle">
-          </form>
-        </section>
-        <section>
-          <p>
-            Insurance The Renter hereby warrants to Owner that Renter possess
-            car insurance that covers personal injury to Renter or other persons
-            as well as the Vehicle and the property of others. Indemnity
-            Regardless of insurance coverage, Renter shall fully indemnify the
-            Owner for any loss, damage, and legal actions, including reasonable
-            attorneys fees that Owner suffers due to Renter’s use of Vehicle
-            during the term of this Agreement, including but not limited to,
-            damage to the Vehicle, damage to the property of others, injury to
-            Renter, and injury to others. This provision survives the
-            termination of this Agreement. Owner Warranty The Owner represents
-            that to the best of his knowledge and belief that the Vehicle is in
-            sound and safe condition and free of any known faults or defects
-            that would affect its safe operation under normal use. Renter
-            Warranties The Renter agrees that Renter will not (a) use the
-            Vehicle to carry any passengers other than Renter; (b) allow any
-            other person to operate the Vehicle; (c) operate the Vehicle in
-            violation of any laws or for an illegal purpose and that if Renter
-            does, Renter is responsible for all associated, tickets, fines, and
-            fees; (d) use the Vehicle to push or tow another vehicle; (e) use
-            the Vehicle for any race or competition; (f) operate the vehicle in
-            a negligent manner. Arbitration In the event that the Parties cannot
-            amicably resolve a dispute or damage claim resulting from this
-            Agreement, the Parties agree to resolve any such dispute or damage
-            claim by arbitration. The arbitration proceeding shall be conducted
-            in [City], [State], in accordance with the rules of the American
-            Arbitration Association then in effect with one (1) arbitrator to be
-            selected by mutual agreement of the Parties. If the Parties cannot
-            agree on an arbitrator, then the American Arbitration Association
-            shall select an arbitrator from the National Panel of Arbitrators.
-            The laws of the State of [State] in the United States shall apply to
-            the arbitration proceedings. The Parties agree that the arbitrator
-            cannot award punitive damages to either Party and agree to be bound
-            by the arbitrator’s findings. Judgment upon the award rendered by
-            the arbitrator may be entered in any court having jurisdiction. Page
-            2 of 3 Sample Car Rental Contract Disputes and Governing Law. The
-            laws of the State of [State] in the United States without regard to
-            any conflict of law principles govern this Agreement. No action,
-            arising out of the transactions under this Agreement may be brought
-            by either Party more than one year after the cause of action has
-            accrued. General This Agreement, including all Exhibit(s),
-            constitutes the entire agreement between the Parties in connection
-            with the subject matter hereof and supersedes all agreements,
-            proposals, representations and other understandings, oral or
-            written, of the Parties and any current or subsequent purchase
-            order(s) provided by Affiliate. No alteration or modification of
-            this Agreement or any Exhibits shall be valid unless made in writing
-            and signed by an authorized Affiliate of each Party. The waiver by
-            either Party of a breach of any provision of the Agreement shall not
-            operate or be construed as a waiver of any subsequent breach and any
-            waiver must be in writing and signed by an authorized Affiliate of
-            the Parties hereto. If any provision of this Agreement is held to be
-            invalid or unenforceable, the remaining provisions shall continue in
-            full force and effect. Any notice or other communication required or
-            permitted hereunder shall be given in writing to the other Party at
-            the address stated above, or at such other address as shall be given
-            by either Party to the other in writing. Any terms of this Agreement
-            which by their nature extend beyond its termination remain in effect
-            until fulfilled, and apply to respective successors and rightful
-            assignees.
-          </p>
-        </section>
-      </main>
-      <footer>
-        <p id="contact">
-          contact <br>
-          +1(234)567-8910<br>testemail@gmail.com
+          <input type="submit" value="Reserve Vehicle" />
+        </form>
+      </section>
+      <section>
+        <p>
+          Insurance The Renter hereby warrants to Owner that Renter possess car
+          insurance that covers personal injury to Renter or other persons as
+          well as the Vehicle and the property of others. Indemnity Regardless
+          of insurance coverage, Renter shall fully indemnify the Owner for any
+          loss, damage, and legal actions, including reasonable attorneys fees
+          that Owner suffers due to Renter’s use of Vehicle during the term of
+          this Agreement, including but not limited to, damage to the Vehicle,
+          damage to the property of others, injury to Renter, and injury to
+          others. This provision survives the termination of this Agreement.
+          Owner Warranty The Owner represents that to the best of his knowledge
+          and belief that the Vehicle is in sound and safe condition and free of
+          any known faults or defects that would affect its safe operation under
+          normal use. Renter Warranties The Renter agrees that Renter will not
+          (a) use the Vehicle to carry any passengers other than Renter; (b)
+          allow any other person to operate the Vehicle; (c) operate the Vehicle
+          in violation of any laws or for an illegal purpose and that if Renter
+          does, Renter is responsible for all associated, tickets, fines, and
+          fees; (d) use the Vehicle to push or tow another vehicle; (e) use the
+          Vehicle for any race or competition; (f) operate the vehicle in a
+          negligent manner. Arbitration In the event that the Parties cannot
+          amicably resolve a dispute or damage claim resulting from this
+          Agreement, the Parties agree to resolve any such dispute or damage
+          claim by arbitration. The arbitration proceeding shall be conducted in
+          [City], [State], in accordance with the rules of the American
+          Arbitration Association then in effect with one (1) arbitrator to be
+          selected by mutual agreement of the Parties. If the Parties cannot
+          agree on an arbitrator, then the American Arbitration Association
+          shall select an arbitrator from the National Panel of Arbitrators. The
+          laws of the State of [State] in the United States shall apply to the
+          arbitration proceedings. The Parties agree that the arbitrator cannot
+          award punitive damages to either Party and agree to be bound by the
+          arbitrator’s findings. Judgment upon the award rendered by the
+          arbitrator may be entered in any court having jurisdiction. Page 2 of
+          3 Sample Car Rental Contract Disputes and Governing Law. The laws of
+          the State of [State] in the United States without regard to any
+          conflict of law principles govern this Agreement. No action, arising
+          out of the transactions under this Agreement may be brought by either
+          Party more than one year after the cause of action has accrued.
+          General This Agreement, including all Exhibit(s), constitutes the
+          entire agreement between the Parties in connection with the subject
+          matter hereof and supersedes all agreements, proposals,
+          representations and other understandings, oral or written, of the
+          Parties and any current or subsequent purchase order(s) provided by
+          Affiliate. No alteration or modification of this Agreement or any
+          Exhibits shall be valid unless made in writing and signed by an
+          authorized Affiliate of each Party. The waiver by either Party of a
+          breach of any provision of the Agreement shall not operate or be
+          construed as a waiver of any subsequent breach and any waiver must be
+          in writing and signed by an authorized Affiliate of the Parties
+          hereto. If any provision of this Agreement is held to be invalid or
+          unenforceable, the remaining provisions shall continue in full force
+          and effect. Any notice or other communication required or permitted
+          hereunder shall be given in writing to the other Party at the address
+          stated above, or at such other address as shall be given by either
+          Party to the other in writing. Any terms of this Agreement which by
+          their nature extend beyond its termination remain in effect until
+          fulfilled, and apply to respective successors and rightful assignees.
         </p>
-      </footer>
-      <script src="scripts/reservations.js"></script>
-    </body>
-  </html>
+      </section>
+    </main>
+    <footer>
+      <p id="contact">
+        contact <br />
+        +1(234)567-8910<br />testemail@gmail.com
+      </p>
+      <a class="socialLink" href="https://www.facebook.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+          alt="Facebook"
+        />
+      </a>
+      <a class="socialLink" href="https://www.twitter.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+          alt="Twitter"
+        />
+      </a>
+      <a class="socialLink" href="https://www.instagram.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+          alt="Instagram"
+        />
+      </a>
+    </footer>
+    <script src="scripts/reservations.js"></script>
+  </body>
+</html>

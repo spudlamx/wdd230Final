@@ -1,47 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Scoots Rentals">
-    <meta property="og:type" content="Website">
-    <meta property="og:image" content="images/idaho-falls.webp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Scoots Rentals" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:image" content="images/idaho-falls.webp" />
     <meta
       property="og:url"
       content="https://spudlamx.github.io/wdd230/chamber/"
-  >
-  <link
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Outfit"
-  >
+    />
     <title>Scoots Rentals</title>
-    <meta name="author" content="Spencer Lamoreaux">
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
+    <meta name="author" content="Spencer Lamoreaux" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/smaller.css" />
+  </head>
+  <body>
     <header>
-        <img id="logo" src="images/scooters.webp" alt="logo">
-        <h1>Scoots Rentals</h1>
-        <h3>Rentals</h3>
+      <img id="logo" src="images/scooters.webp" alt="logo" />
+      <h1>Scoots Rentals</h1>
+      <h3>Rentals</h3>
     </header>
     <nav>
-        <button id="menu"></button>
-        <ul class="navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rentals.html">Rentals</a></li>
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <button id="menu"></button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    <main>
-        <div class="card-container" id="rentalsCards">
-            <!-- Rental cards will be displayed here -->
-        </div>          
+    <main id="rentalsMain">
+      <div class="card-container" id="rentalsCards">
+        <!-- Rental cards will be displayed here -->
+      </div>
+      <section id="right">
+        <h2>Rental Info</h2>
+        <table id="vehicleTable">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+              <th colspan="2">Reservation</th>
+              <th colspan="2">Walk-in</th>
+            </tr>
+            <tr>
+              <th>Rental Type</th>
+              <th>Max. Persons</th>
+              <th>Half Day (3 hrs)</th>
+              <th>Full Day</th>
+              <th>Half Day (3 hrs)</th>
+              <th>Full Day</th>
+            </tr>
+          </thead>
+          <tbody id="vehicleTableBody">
+            <!-- Vehicle information will be populated here -->
+          </tbody>
+        </table>
+      </section>
     </main>
     <footer>
-            <p id="contact">contact <br> +1(234)567-8910<br>testemail@gmail.com</p>
-        </footer>
-        <script src="scripts/rentals.js"></script>
-    </body>
+      <p id="contact">
+        contact <br />
+        +1(234)567-8910<br />testemail@gmail.com
+      </p>
+      <a class="socialLink" href="https://www.facebook.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+          alt="Facebook"
+        />
+      </a>
+      <a class="socialLink" href="https://www.twitter.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+          alt="Twitter"
+        />
+      </a>
+      <a class="socialLink" href="https://www.instagram.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+          alt="Instagram"
+        />
+      </a>
+    </footer>
+    <script src="scripts/rentals.js"></script>
+  </body>
 </html>

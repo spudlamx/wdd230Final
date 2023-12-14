@@ -15,7 +15,7 @@ header {
 header img {
   grid-column: 1/2;
   grid-row: 1/3;
-  background-color: antiquewhite;
+  background-color: darkblue;
   width: auto;
   height: 100%;
   max-height: 150px;
@@ -49,7 +49,7 @@ nav {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2.5fr 1fr;
   grid-template-rows: auto;
   background-color: cadetblue;
   justify-content: center;
@@ -73,15 +73,40 @@ footer {
 a:link {
   text-decoration: none;
 }
+.banner {
+  display: block;
+  position: sticky;
+  top: 0; /* To make it stick at the top */
+  max-width: 100%;
+  background-color: #d1e6f8;
+  padding: 5px;
+  text-align: center;
+  z-index: 1000; /* To ensure it stays above other elements */
+  transition: top 0.3s ease; /* Smooth transition */
+}
+.banner button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+}
+.banner button:hover{
+  transform: scale(1.2);
+  font-size: 20px;
+}
 #left {
   display: block-flex;
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
-#right {
+#middle {
   grid-column: 2/3;
   grid-row: 1/2;
+}
+#right{
+  grid-column: 3/4;
 }
 
 #heroImg {
@@ -89,6 +114,7 @@ a:link {
   max-width: 100%;
   border-radius: 10px;
 }
+
 
 #hero {
   width: 100%;
@@ -195,6 +221,9 @@ textarea:valid {
 #contactMain {
   grid-template-columns: repeat(2, 1fr);
 }
+#rentalsMain{
+  display: inline;
+}
 
 
 /* Add your CSS styles here */
@@ -250,4 +279,33 @@ textarea:valid {
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.social-icon {
+  width: 30px; /* Set the width of the icons */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Add some margin */
+}
+.socialLink:hover{
+  background-color: darkblue;
 }

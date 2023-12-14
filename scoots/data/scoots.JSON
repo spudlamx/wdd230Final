@@ -37,15 +37,6 @@
       "img": "images/Honda-Pioneer.webp"
     },
     {
-      "Rental Type": "Jeep Wrangler - 4 door with a/c",
-      "Max. Persons": 5,
-      "reservation Half Day (3 hrs)": "$70",
-      "reservation Full Day": "$100",
-      "walk-in Half Day (3 hrs)": "$85",
-      "walk-in Full Day": "$125",
-      "img": "images/Jeep-4.webp"
-    },
-    {
       "Rental Type": "Jeep Wrangler - 2 door",
       "Max. Persons": 4,
       "reservation Half Day (3 hrs)": "$60",
@@ -53,6 +44,15 @@
       "walk-in Half Day (3 hrs)": "$70",
       "walk-in Full Day": "$90",
       "img": "images/Jeep-2.webp"
+    },
+    {
+      "Rental Type": "Jeep Wrangler - 4 door with a/c",
+      "Max. Persons": 5,
+      "reservation Half Day (3 hrs)": "$70",
+      "reservation Full Day": "$100",
+      "walk-in Half Day (3 hrs)": "$85",
+      "walk-in Full Day": "$125",
+      "img": "images/Jeep-4.webp"
     }
   ]
 }

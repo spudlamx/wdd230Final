@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Scoots Rentals">
-    <meta property="og:type" content="Website">
-    <meta property="og:image" content="images/idaho-falls.webp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Scoots Rentals" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:image" content="images/idaho-falls.webp" />
     <meta
       property="og:url"
       content="https://spudlamx.github.io/wdd230/chamber/"
-  >
-  <link
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Outfit"
-  >
+    />
     <title>Scoots Home</title>
-    <meta name="author" content="Spencer Lamoreaux">
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
+    <meta name="author" content="Spencer Lamoreaux" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/smaller.css" />
+  </head>
+  <body>
+    <div class="banner" id="banner">
+      <p id="highTemp"></p>
+      <button onclick="closeBanner()">🆇</button>
+    </div>
     <header>
-        <img id="logo" src="images/scooters.webp" alt="logo">
-        <h1>Scoots Rentals</h1>
-        <h3>Home</h3>
+      <img id="logo" src="images/scooters.webp" alt="logo" />
+      <h1>Scoots Rentals</h1>
+      <h3>Home</h3>
     </header>
     <nav>
-        <button id="menu"></button>
-        <ul class="navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rentals.html">Rentals</a></li>
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <button id="menu"></button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
     <main>
-      <section id="left">
-          <div class="info" id="weather"><h2>Cozumel Weather</h2>
-            <div class="infoPad">
-              <h3>Current Weather</h3>
-              <p>Temp: <span id="currentTemp"></span></p>
-              <p><span id="weatherDesc"></span></p>
-            </div></div>
-          <div class="info"> rental types</div>
+      <section id="middle">
+        <div id="hero">
+          <picture id="heroImg">
+            <source srcset="images/home-3.webp" type="image/webp" />
 
+            <img src="images/home-3.webp" alt="Idaho Falls" id="heroImg" />
+          </picture>
+          <a id="overlay" href="index.html">Reserve your ride!</a>
+        </div>
+        <div id="photoAlbum">
+          <img src="images/home-2.webp" alt="Idaho Falls" class="albumPic" />
+          <img src="images/home-1.webp" alt="Idaho Falls" class="albumPic" />
+          <img src="images/home-4.webp" alt="Idaho Falls" class="albumPic" />
+          <img src="images/home-5.webp" alt="Idaho Falls" class="albumPic" />
+          <img src="images/home-6.webp" alt="Idaho Falls" class="albumPic" />
+          <img src="images/home-7.webp" alt="Idaho Falls" class="albumPic" />
+        </div>
       </section>
-        <section id="right">
-            <div id="hero">
-                <picture id="heroImg">
-                  <source
-                    srcset="images/home-3.webp"
-                    type="image/webp"
-                >
+
+      <section id="left">
+        <div class="info" id="weather">
+          <h2>Cozumel Weather</h2>
+          <div class="infoPad">
+            <h3>Current Weather</h3>
+            <img id="weather-icon" src="" alt="" />
+            <p>Temp: <span id="currentTemp"></span></p>
+            <p>Humidity: <span id="currentHumidity"></span></p>
+            <p>Weather: <span id="currentWeather"></span></p>
+          </div>
+          <div class="infoPad" id="forecast"></div>
+        </div>
+      </section>
+
+      <section id="right">
+        <h2>Vehicles</h2>
+        <table id="vehicleTable">
+          <thead>
+            <tr>
+              <th>Rental Type</th>
+              <th>Max. Persons</th>
+              <th>Starting at:</th>
               
-                  <img src="images/home-3.webp" alt="Idaho Falls" id="heroImg">
-                </picture>
-                  <a id="overlay" href="index.html">Reserve your ride!</a>
-              </div>
-              <div id="photoAlbum">
-                <img src="images/home-2.webp" alt="Idaho Falls" class="albumPic">
-                <img src="images/home-1.webp" alt="Idaho Falls" class="albumPic">
-                <img src="images/home-4.webp" alt="Idaho Falls" class="albumPic">
-                <img src="images/home-5.webp" alt="Idaho Falls" class="albumPic">
-                <img src="images/home-6.webp" alt="Idaho Falls" class="albumPic">
-                <img src="images/scooters.webp" alt="Idaho Falls" class="albumPic">
-              </div>
-        </section>
-        
-        </main>
+            </tr>
+          </thead>
+          <tbody id="vehicleTableBody">
+            <!-- Vehicle information will be populated here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
     <footer>
-        <p id="contact">contact <br> +1(234)567-8910<br>testemail@gmail.com</p>
+      <p id="contact">
+        contact <br />
+        +1(234)567-8910<br />testemail@gmail.com
+      </p>
+      <a class="socialLink" href="https://www.facebook.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+          alt="Facebook"
+        />
+      </a>
+      <a class="socialLink" href="https://www.twitter.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+          alt="Twitter"
+        />
+      </a>
+      <a class="socialLink" href="https://www.instagram.com/" target="_blank">
+        <img
+          class="social-icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+          alt="Instagram"
+        />
+      </a>
     </footer>
-</body>
+    <script src="scripts/scoots.js"></script>
+    <script src="scripts/weather.js"></script>
+  </body>
 </html>
 <!--    📄 The Home page is a contemporary, exciting landing page providing 
         images of the island and rental facilities and must include the following:

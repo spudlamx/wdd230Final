@@ -28,3 +28,26 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(error => console.log(error));
   });
   
+  fetch("data/scoots.json") // Fetch the JSON file
+  .then((response) => response.json()) // Parse JSON
+  .then((data) => {
+    const tableBody = document.getElementById("vehicleTableBody");
+
+    data.vehicles.forEach((vehicle) => {
+      const row = document.createElement("tr");
+
+      // Check if the current property is 'img'; if yes, skip adding it to the table
+      Object.entries(vehicle).forEach(([key, value]) => {
+        if (key !== "img") {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        }
+      });
+
+      tableBody.appendChild(row);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching or parsing the JSON file:", error);
+  });
