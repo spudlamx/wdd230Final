@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
     <meta property="og:title" content="Scoots Rentals">
     <meta property="og:type" content="Website">
     <meta property="og:image" content="images/idaho-falls.webp">
@@ -35,12 +34,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <p>📄 The Rentals page describes the available rental options and prices with images.<br>
-        The prices displayed on the site must be obtained from a JSON data source of your own making.<br>
-        Store this .json file in a data 📁 folder in this project folder.<br>
-        Incorporate a data table in your HTML structure to display some portion of this information.</p>
-        <footer>
+    <main>
+        <div class="card-container" id="rentalsCards">
+            <!-- Rental cards will be displayed here -->
+        </div>          
+    </main>
+    <footer>
             <p id="contact">contact <br> +1(234)567-8910<br>testemail@gmail.com</p>
         </footer>
+        <script src="scripts/rentals.js"></script>
     </body>
 </html>
